@@ -1,0 +1,515 @@
+/* admin_frames.css */
+:root {
+    --primary-color: #ff8c42;
+    --secondary-color: #7b61ff;
+    --text-color: #1e2b3b;
+    --card-bg: #ffffff;
+    --bg-color: #f9fafc;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --border-color: #e2e8f0;
+    --input-bg: #f8fafc;
+    --error-bg: #fff1f2;
+    --error-text: #e11d48;
+    --success-bg: #f0fdf4;
+    --success-text: #16a34a;
+
+    /* ДОБАВЛЕНО: Переменные из styles.css для шапки */
+    --accent-color: #ffd342;
+    --header-admin-bg: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    --header-admin-text: #ffffff;
+}
+
+/* === ИЗМЕНЕНИЕ 1: body становится flex-контейнером === */
+body {
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 0; 
+    margin: 0; /* Гарантирует отсутствие внешних отступов */
+    display: flex; /* Добавлено */
+    flex-direction: column; /* Добавлено */
+    height: 100vh; /* Добавлено: Вся высота экрана */
+    overflow: hidden; /* Предотвращаем случайный скролл body */
+}
+
+/* === ДОБАВЛЕНО: НОВАЯ ШАПКА АДМИНИСТРАТОРА === */
+.admin-top-nav {
+    background: var(--header-admin-bg);
+    color: var(--header-admin-text);
+    padding: 0 30px;
+    flex-shrink: 0; /* Шапка не сжимается */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+.admin-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Фиксированная высота шапки */
+}
+.admin-nav-links,
+.admin-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.admin-nav-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-right: 15px;
+    opacity: 0.9;
+}
+.admin-nav-links a,
+.admin-nav-actions a {
+    color: var(--header-admin-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap; /* Запрет переноса текста в кнопке */
+}
+.admin-nav-links a:hover,
+.admin-nav-actions a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+/* Активная кнопка */
+.admin-nav-links a.active {
+    background: var(--accent-color);
+    color: var(--text-color);
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Кнопки действий */
+.admin-nav-actions a.alt {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
+    font-weight: 600;
+}
+.admin-nav-actions a.alt:hover {
+    background: var(--accent-color);
+}
+
+/* === ДОБАВЛЕНО: Адаптивность для шапки === */
+@media (max-width: 1200px) {
+    .admin-top-nav {
+        padding: 10px 20px;
+    }
+    .admin-nav-content {
+        flex-direction: column; /* Ставим блоки друг под друга */
+        height: auto;
+        gap: 10px;
+    }
+    .admin-nav-links {
+        flex-wrap: wrap; /* Позволяем кнопкам переноситься */
+        justify-content: center;
+        order: 2; /* Кнопки навигации идут вторыми */
+    }
+    .admin-nav-actions {
+        order: 1; /* Кнопки (Профиль/Главная) идут первыми */
+        width: 100%;
+        justify-content: center;
+    }
+    .admin-nav-title {
+        display: none; /* Скрываем "Админ-панель:" */
+    }
+}
+
+@media (max-width: 768px) {
+     .admin-nav-links a,
+     .admin-nav-actions a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+     }
+}
+/* === КОНЕЦ СТИЛЕЙ ШАПКИ === */
+
+
+/* === ИЗМЕНЕНИЕ 2: Контейнер занимает ОСТАВШЕЕСЯ место === */
+.admin-panel-container {
+    width: 100vw; 
+    max-width: 100vw;
+    margin: 0; 
+    height: auto; /* Убираем 100vh */
+    flex-grow: 1; /* Добавлено: Занимает все оставшееся место */
+    min-height: 0; /* Добавлено: Важно для flex-grow в Chrome/FF */
+}
+.modal-content {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 0; 
+    box-shadow: none; 
+}
+/* === КОНЕЦ ИЗМЕНЕНИЙ === */
+
+
+/* Сетка */
+.profile-grid {
+    grid-template-columns: 1fr 2.5fr; 
+    gap: 1px;
+    background-color: var(--border-color);
+    flex-grow: 1;
+    min-height: 0; 
+}
+/* ... (остальной код admin_frames.css без изменений) ... */
+
+.customization-column,
+.info-edit-column {
+    background-color: var(--card-bg);
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Форма добавления (сбоку) */
+.edit-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.edit-card label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+.edit-card input[type="text"],
+.edit-card input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+}
+.edit-card input[type="file"] {
+    padding: 8px;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.save-btn:hover {
+    background-color: #e57d38;
+}
+
+/* Чекбокс */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 10px;
+    cursor: pointer;
+}
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    height: 18px;
+    width: 18px;
+    accent-color: var(--primary-color);
+}
+
+
+/* Колонка со списком */
+#frame-list-column {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+#frame-list-column h3 {
+     font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.frame-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+th {
+    background-color: var(--input-bg);
+    font-weight: 600;
+    color: var(--text-color);
+    position: sticky;
+    top: 0;
+    z-index: 10; 
+}
+tbody tr:hover {
+    background-color: #fcfcfc;
+}
+td code {
+    background-color: #f1f5f9;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Превью в таблице */
+.border-preview-cell {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Кнопки Статуса (Видим/Скрыт) */
+.toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+.toggle-btn.visible {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: #bbf7d0;
+}
+.toggle-btn.visible:hover { background-color: #dcfce7; }
+.toggle-btn.hidden {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border-color: #fecaca;
+}
+.toggle-btn.hidden:hover { background-color: #fee2e2; }
+
+
+/* Кнопки Действий (Edit/Delete) */
+td.actions-cell {
+    white-space: nowrap;
+    width: 80px; /* Фиксируем ширину */
+}
+td .edit-btn,
+td .delete-btn {
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    color: #94a3b8; /* Серый по умолчанию */
+    padding: 4px;
+}
+td .edit-btn {
+    margin-right: 8px; /* Отступ между кнопками */
+}
+td .edit-btn:hover {
+    color: #0284c7; /* Синий */
+}
+td .delete-btn:hover {
+    color: var(--error-text);
+}
+
+
+/* Заголовок категории в таблице */
+tr.category-header td {
+    background-color: #f8fafc;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+    padding: 12px 15px;
+    position: sticky;
+    top: 39px; /* Высота th */
+    z-index: 9;
+}
+
+/* Форма редактирования в таблице */
+tr.edit-row td {
+    padding: 0;
+    background-color: #fcfcff;
+    border-bottom: 2px solid var(--secondary-color); /* Выделяем */
+    border-top: 2px solid var(--secondary-color);
+}
+.edit-form-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+/* Колонка 1: Превью */
+.edit-form-preview {
+    flex-basis: 120px;
+    flex-shrink: 0;
+    text-align: center;
+}
+.edit-form-preview .border-preview-cell {
+    margin: 0 auto 5px auto;
+}
+.edit-form-preview code {
+    font-size: 0.75rem;
+}
+
+/* Колонка 2: Поля ввода */
+.edit-form-inputs {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0; /* Фикс для flex */
+}
+.edit-form-inputs label,
+.edit-form-file-toggle label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #475569;
+    display: block;
+}
+.edit-form-inputs input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: white;
+}
+
+/* Колонка 3: Файл и Чекбокс */
+.edit-form-file-toggle {
+    flex-basis: 220px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.edit-form-file-toggle input[type="file"] {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: white;
+}
+.edit-form-file-toggle .checkbox-label {
+    margin-top: 0;
+    font-size: 0.9rem;
+}
+
+/* Колонка 4: Действия */
+.edit-form-actions {
+    flex-basis: 90px;
+    flex-shrink: 0;
+    text-align: right;
+}
+/* Кнопки Сохранить/Отмена в форме */
+.save-btn.small-btn,
+.cancel-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.save-btn.small-btn {
+    background-color: var(--success-text);
+    color: white;
+}
+.save-btn.small-btn:hover {
+    background-color: #15803d;
+}
+.cancel-btn {
+    background-color: #e2e8f0;
+    color: var(--text-color);
+    margin-left: 5px;
+    text-decoration: none;
+}
+.cancel-btn:hover {
+    background-color: #cbd5e1;
+}
+
+
+/* Адаптивность */
+@media (max-width: 1100px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-edit-column {
+        border-top: 1px solid var(--border-color);
+    }
+}
+@media (max-width: 768px) {
+    /* Адаптация формы в таблице */
+    .edit-form-container {
+        flex-wrap: wrap;
+    }
+    .edit-form-preview {
+        flex-basis: 100%;
+        order: -1; /* Превью вверху */
+        margin-bottom: 10px;
+    }
+    .edit-form-inputs {
+        flex-basis: 100%;
+    }
+    .edit-form-file-toggle {
+        flex-basis: 100%;
+    }
+    .edit-form-actions {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Сообщения */
+.message {
+    padding: 15px 20px;
+    margin: 0 0 20px 0; 
+    border-radius: 8px;
+    font-weight: 500;
+}
+.message.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-text);
+}
+.message.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid var(--success-text);
+}

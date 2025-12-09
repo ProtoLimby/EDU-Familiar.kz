@@ -1,0 +1,637 @@
+/* settings.css (Ширина колонок изменена + Баг RGB исправлен + Новые градиенты) */
+
+:root {
+    --primary-color: #ff8c42;
+    --secondary-color: #7b61ff;
+    --text-color: #1e293b;
+    --card-bg: #ffffff;
+    --bg-color: #f9fafc;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --border-color: #e2e8f0;
+    --input-bg: #f8fafc;
+}
+
+/* === АНИМАЦИЯ ДЛЯ RGB === */
+@keyframes rgb-border-anim {
+    0%   { border-color: #ff0000; }
+    17%  { border-color: #ff00ff; }
+    33%  { border-color: #0000ff; }
+    50%  { border-color: #00ffff; }
+    67%  { border-color: #00ff00; }
+    83%  { border-color: #ffff00; }
+    100% { border-color: #ff0000; }
+}
+
+/* === ОСНОВА МОДАЛЬНОГО ОКНА === */
+.settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 40px 20px;
+    
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.settings-modal.active {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* === ЗАГОЛОВОК === */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 35px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.close-modal {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #94a3b8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.close-modal:hover {
+    color: var(--text-color);
+}
+
+/* === ОСНОВНАЯ СЕТКА === */
+.profile-grid {
+    display: grid;
+    /* ИЗМЕНЕНО: Центральная колонка стала шире (1.8fr), боковые остались 1fr */
+    grid-template-columns: 1fr 1.8fr 1fr;
+    gap: 1px;
+    background-color: var(--border-color);
+}
+
+.avatar-column,
+.info-edit-column,
+.customization-column {
+    background-color: var(--card-bg);
+    padding: 35px;
+}
+
+/* === КОЛОНКА 1: АВАТАР === */
+.avatar-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.avatar-box {
+    position: relative;
+    border-radius: 50%;
+}
+
+.main-avatar {
+    /* Стили для "ровности" (fix "crooked") */
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    box-sizing: border-box;
+    background-clip: content-box;
+    
+    border: 4px solid var(--primary-color); /* (дефолт) */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.upload-btn:hover {
+    background-color: #5f48e0;
+}
+
+/* === КОЛОНКА 2: ИНФО + РЕДАКТИРОВАНИЕ === */
+.info-edit-column {
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.info-card, .edit-card {
+    margin-bottom: 30px;
+}
+
+.info-card h3, .edit-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+.info-row span {
+    color: #64748b;
+}
+.info-row strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.edit-card label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.edit-card input[type="text"],
+.edit-card select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+}
+
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 25px;
+}
+.save-btn:hover {
+    background-color: #e57d38;
+}
+.save-btn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* === КОЛОНКА 3: ОФОРМЛЕНИЕ === */
+.customization-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* Табы */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn.premium {
+    color: var(--secondary-color);
+}
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+.tab-btn.premium.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
+
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* Вкладка "Стандарт" */
+.control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.control-row label {
+    font-weight: 600;
+    color: var(--text-color);
+}
+.control-row input[type="color"] {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+}
+
+.preview-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.preview-row span {
+    font-weight: 600;
+    color: #64748b;
+}
+.border-preview {
+    /* Стили для "ровности" (fix "crooked") */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box;
+    background-clip: content-box;
+
+    border: 4px solid var(--primary-color); /* (дефолт) */
+}
+
+/* === СТИЛИ EFPremium === */
+
+/* === ИЗМЕНЕНИЕ 1: Стили контейнера секций (убран скролл) === */
+.premium-sections-container {
+    /* max-height: 350px; <-- УБРАНО */
+    /* overflow-y: auto; <-- УБРАНО */
+    /* border: 1px solid var(--border-color); <-- УБРАНО */
+    border-radius: 8px;
+    padding: 0;
+}
+
+.premium-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+}
+.premium-section:first-child h3 {
+    margin-top: 5px;
+}
+
+/* === ИЗМЕНЕНИЕ 2: Обертка для кнопок и сетки === */
+.grid-scroll-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* === ИЗМЕНЕНИЕ 3: Стили сетки (теперь это flex-контейнер) === */
+.efpremium-frames-grid {
+    display: flex; /* <-- ИЗМЕНЕНО */
+    flex-wrap: nowrap; /* <-- ДОБАВЛЕНО */
+    overflow-x: hidden; /* <-- ИЗМЕНЕНО */
+    scroll-behavior: smooth; /* <-- ДОБАВЛЕНО */
+    
+    grid-template-columns: none; /* <-- Сброс grid */
+    gap: 10px;
+    padding: 10px 5px; /* Небольшой отступ для тени ячеек */
+
+    /* Скрытие полосы прокрутки */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.efpremium-frames-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+
+.border-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    text-align: center;
+    
+    /* === ИЗМЕНЕНИЕ 4: Фиксированная ширина ячеек === */
+    flex-shrink: 0; /* Не сжиматься */
+    width: 80px; /* Фиксированная ширина */
+}
+
+.border-cell:hover {
+    background-color: #f8f8f8;
+}
+
+.border-cell.selected {
+    border-color: var(--secondary-color);
+    background-color: #f4f2ff;
+}
+
+.border-preview-cell {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    border: 4px solid var(--text-color);
+    background-color: #eee;
+}
+
+.border-label {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* ИСПРАВЛЕНО: RGB (анимация border-color) */
+.border-rgb {
+    animation: rgb-border-anim 4s linear infinite;
+    border-width: 4px;
+    border-style: solid;
+}
+.border-preview-cell.border-rgb {
+    animation: rgb-border-anim 4s linear infinite;
+    border-width: 4px;
+    border-style: solid;
+    background: #eee; /* Фон для ячейки превью (не аватар) */
+}
+
+/* === ИЗМЕНЕНИЕ 5: Стили для кнопок слайдера === */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    /* Сдвигаем на 50% высоты + 50% высоты кнопки */
+    transform: translateY(calc(-50% - 4px)); 
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+    display: flex; /* Используем flex для центрирования < > */
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.scroll-btn:hover {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.scroll-btn.left {
+    left: -10px;
+}
+.scroll-btn.right {
+    right: -10px;
+}
+.scroll-btn:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+/* === КОНЕЦ ИЗМЕНЕНИЙ СЛАЙДЕРА === */
+
+
+/* Уведомление для не-премиум */
+.premium-notice {
+    margin-top: 15px;
+    color: #888;
+    text-align: center;
+}
+.premium-link {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    text-align: center;
+    font-weight: 600;
+}
+.premium-link:hover {
+    background-color: #e57d38;
+}
+
+.save-border-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+.save-border-btn:hover {
+    background-color: #e57d38;
+}
+
+
+/* === ФУТЕР МОДАЛКИ === */
+.modal-footer {
+    padding: 20px 35px;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+}
+
+.close-menu-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: #e2e8f0;
+    color: #475569;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.close-menu-btn:hover {
+    background-color: #cbd5e1;
+}
+
+/* === АДАПТИВНОСТЬ === */
+@media (max-width: 1000px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+    .info-edit-column {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    .settings-modal {
+        padding: 0;
+    }
+    .avatar-column, .info-edit-column, .customization-column {
+        padding: 20px;
+    }
+    .modal-header {
+        padding: 15px 20px;
+    }
+    .scroll-btn.left {
+        left: 0;
+    }
+    .scroll-btn.right {
+        right: 0;
+    }
+}
+
+/* ==============================================
+=== НОВЫЕ СТИЛИ ДЛЯ РАМОК-ОВЕРЛЕЕВ (FRAMES) ===
+==============================================
+*/
+
+/*
+ * === ГЛАВНЫЙ ФИКС "КРИВИЗНЫ" ===
+ * Применяем к главному аватару на странице (.user-icon)
+ */
+.user-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    background-size: cover;
+    background-position: center;
+    
+    position: relative; 
+    box-sizing: border-box;
+    background-clip: content-box;
+    
+    /* === ИСПРАВЛЕНИЕ: Заставляем <div> вести себя как <img> для центрирования === */
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+/* === НОВЫЙ КЛАСС ДЛЯ ОТСТУПОВ === */
+/* Этот класс будет ДОБАВЛЯТЬСЯ/УДАЛЯТЬСЯ через JS или PHP */
+.avatar-padded {
+    padding: 6px;
+}
+
+.settings-btn,
+.logout-btn { 
+    width: 100%;
+    padding: 10px;
+}
+
+/* === Стили для кнопок админ-панели === */
+
+/* 1. Контейнер, чтобы кнопки были в один ряд */
+.admin-buttons-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* 2. Общий стиль для кнопок админки */
+.admin-panel-btn,
+.admin-panel-icon-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--secondary-color); /* Фиолетовый */
+    color: var(--header-text);
+    box-sizing: border-box;
+    display: flex; /* Используем flex для центрирования */
+    align-items: center;
+    justify-content: center;
+}
+.admin-panel-btn:hover,
+.admin-panel-icon-btn:hover {
+    background: #5f48e0; /* Темно-фиолетовый */
+    transform: translateY(-2px);
+}
+
+/* 3. Основная кнопка (с текстом) */
+.admin-panel-btn {
+    flex-grow: 1; /* Занимает оставшееся место */
+}
+
+/* 4. Новая кнопка-иконка (маленькая) */
+.admin-panel-icon-btn {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 42px; /* Фиксированная ширина */
+    font-size: 16px; /* Иконка чуть побольше */
+}

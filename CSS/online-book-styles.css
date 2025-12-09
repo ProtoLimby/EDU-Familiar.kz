@@ -1,0 +1,260 @@
+/* online-book-styles.css (UPDATED: UNIQUE THEMES FOR ALL SUBJECTS) */
+
+/* 1. ФИЛЬТРЫ */
+.filters-container {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.filters-form {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-size: 13px; font-weight: 600; color: #64748b;
+    display: flex; align-items: center; gap: 6px;
+}
+.filter-group label i { color: var(--primary-color); }
+
+.filters-form input, .filters-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filters-form input:focus, .filters-form select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
+}
+
+.apply-filters-btn {
+    padding: 12px 25px;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    height: 46px;
+}
+
+.apply-filters-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* 2. СЕТКА КНИГ */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* Карточка */
+.book-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    position: relative;
+}
+
+.book-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: #e2e8f0;
+}
+
+/* Обложка */
+.book-cover-wrapper {
+    height: 200px;
+    background: #f8fafc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.book-cover-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 40%;
+    background: linear-gradient(to top, rgba(255,255,255,1), transparent);
+    pointer-events: none;
+}
+
+.book-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.15));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+
+.book-card:hover .book-image {
+    transform: scale(1.08) translateY(-5px);
+}
+
+.book-rating-badge {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #d97706;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 2;
+    display: flex; align-items: center; gap: 4px;
+}
+
+/* Контент карточки */
+.book-details-content {
+    padding: 15px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-meta-tags {
+    display: flex; gap: 8px; margin-bottom: 10px;
+}
+
+.tag {
+    font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;
+    padding: 4px 8px; border-radius: 6px;
+    background: #f1f5f9; color: #64748b;
+}
+.tag.class-tag { background: #fff7ed; color: var(--primary-color); }
+
+.book-card h3 {
+    font-size: 17px; font-weight: 600; color: var(--text-color);
+    margin-bottom: 8px; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.book-desc-short {
+    font-size: 13px; color: #94a3b8; line-height: 1.5; margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Кнопки карточки */
+.book-card-footer {
+    display: flex; gap: 10px; margin-top: auto;
+}
+
+.book-action-btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13px; font-weight: 600; text-decoration: none; text-align: center;
+    transition: all 0.2s;
+}
+
+.book-action-btn.primary {
+    flex: 1;
+    background: linear-gradient(90deg, var(--primary-color), #ff9f5e);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 140, 66, 0.3);
+}
+.book-action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 140, 66, 0.4);
+}
+
+.book-action-btn.secondary {
+    width: 42px; flex: none;
+    background: #eff6ff; color: var(--secondary-color);
+    display: flex; align-items: center; justify-content: center;
+}
+.book-action-btn.secondary:hover {
+    background: #dbeafe; color: var(--primary-color);
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+/* Стили для автоматической обложки */
+.generated-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.generated-cover::after {
+    content: '';
+    position: absolute;
+    top: -50%; right: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* === УНИКАЛЬНЫЕ ТЕМЫ ДЛЯ КАЖДОГО ПРЕДМЕТА === */
+
+/* Языки */
+.theme-russian { background: linear-gradient(135deg, #e11d48, #be123c); } /* Красный/Малиновый */
+.theme-kazakh { background: linear-gradient(135deg, #0ea5e9, #0284c7); } /* Небесно-голубой (Флаг) */
+.theme-english { background: linear-gradient(135deg, #2563eb, #1d4ed8); } /* Королевский синий */
+
+/* Точные науки */
+.theme-math { background: linear-gradient(135deg, #4f46e5, #4338ca); }    /* Индиго */
+.theme-physics { background: linear-gradient(135deg, #7c3aed, #6d28d9); } /* Фиолетовый */
+.theme-it { background: linear-gradient(135deg, #0891b2, #0e7490); }      /* Бирюзовый/Киберпанк */
+
+/* Естественные науки */
+.theme-chem { background: linear-gradient(135deg, #10b981, #059669); }    /* Изумрудный */
+.theme-bio { background: linear-gradient(135deg, #65a30d, #4d7c0f); }     /* Лаймовый/Зеленый */
+.theme-nature { background: linear-gradient(135deg, #84cc16, #65a30d); }  /* Светло-зеленый */
+
+/* Гуманитарные */
+.theme-history { background: linear-gradient(135deg, #d97706, #b45309); } /* Охра/Бронза */
+.theme-kaz-history { background: linear-gradient(135deg, #f59e0b, #d97706); } /* Золотистый */
+.theme-geo { background: linear-gradient(135deg, #0284c7, #0369a1); }     /* Океан */
+.theme-law { background: linear-gradient(135deg, #475569, #334155); }     /* Строгий серый */
+.theme-self { background: linear-gradient(135deg, #f472b6, #db2777); }    /* Мягкий розовый */
+.theme-global { background: linear-gradient(135deg, #6366f1, #4f46e5); }  /* Глобал синий */
+
+/* Искусство и Труд */
+.theme-art { background: linear-gradient(135deg, #ec4899, #be185d); }     /* Фуксия */
+.theme-music { background: linear-gradient(135deg, #d946ef, #a21caf); }   /* Пурпурный */
+.theme-work { background: linear-gradient(135deg, #a16207, #854d0e); }    /* Дерево/Коричневый */
+
+/* Спорт и Военка */
+.theme-sport { background: linear-gradient(135deg, #f97316, #ea580c); }   /* Энергичный оранжевый */
+.theme-military { background: linear-gradient(135deg, #57534e, #44403c); }/* Хаки/Камуфляж */
+
+/* Дефолт */
+.theme-default { background: linear-gradient(135deg, #94a3b8, #64748b); }

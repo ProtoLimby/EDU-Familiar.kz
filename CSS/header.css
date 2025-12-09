@@ -1,0 +1,419 @@
+/* CSS/header.css */
+/* Все стили, связанные с шапкой, выпадающими списками и мобильной навигацией */
+
+/* ===== ЛОГИКА ФОНА ШАПКИ ===== */
+
+/* 1. Фон для ГЛАВНОЙ страницы (прозрачный по умолчанию) */
+.page-home header {
+    background: transparent;
+    /* Убираем тень, если она была */
+    box-shadow: none; 
+}
+
+/* 2. Фон для ВСЕХ ОСТАЛЬНЫХ страниц (сразу градиент) */
+.page-internal header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    box-shadow: var(--shadow);
+}
+
+/* 3. Фон для ГЛАВНОЙ, когда мы ее прокрутили (появляется градиент) */
+.page-home header.scrolled {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    box-shadow: var(--shadow);
+}
+
+header {
+    width: 100%;
+    max-width: 1400px;
+    background: transparent;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    box-shadow: var(--shadow);
+}
+
+header.scrolled .site-title,
+header.scrolled nav a,
+header.scrolled .lang-btn,
+header.scrolled .login-btn {
+    color: var(--header-text);
+}
+
+.header-content {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.site-title {
+    color: var(--header-text);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Добавлено для выравнивания с дропдауном */
+}
+
+.desktop-nav a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.desktop-nav a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    position: relative;
+}
+
+.lang-btn {
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-btn.active {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+.login-btn {
+    background: var(--primary-color);
+    color: var(--header-text);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+header.scrolled .login-btn {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.login-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+header.scrolled .login-btn:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-menu span {
+    width: 100%;
+    height: 3px;
+    background: var(--header-text);
+    transition: all 0.3s ease;
+}
+
+header.scrolled .burger-menu span {
+    background: var(--header-text);
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 16px 0 0 16px;
+}
+
+.mobile-nav.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.mobile-nav a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+    color: var(--accent-color);
+}
+
+.mobile-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-actions .language-switcher {
+    justify-content: center;
+}
+
+.mobile-actions .login-btn {
+    text-align: center;
+}
+
+/* dropdown styles */
+.lang-select {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    color: var(--header-text);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    appearance: none;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lang-select:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    transform: translateY(-2px);
+}
+
+.lang-select:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 8px rgba(255, 107, 0, 0.5);
+}
+
+.lang-select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px transparent;
+    border-right: 5px transparent;
+    border-top: 5px solid var(--header-text);
+}
+
+.language-switcher::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px transparent;
+    border-right: 5px transparent;
+    border-top: 5px solid var(--header-text);
+    pointer-events: none;
+}
+
+.lang-select option {
+    position: relative;
+    background-color: #444444;
+    color: var(--header-text);
+    font-size: 14px;
+    padding: 10px;
+    border: 0;
+    border-radius: 100%;
+}
+
+
+/* Новые стили для дропдауна */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: var(--header-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.dropbtn:hover {
+    color: #1e293b;
+    transform: translateY(-2px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #6e5fb9;
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: var(--header-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #8d79f3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Для scrolled состояния */
+header.scrolled .dropbtn,
+header.scrolled .dropdown-content a {
+    color: var(--header-text);
+}
+
+header.scrolled .dropbtn:hover,
+header.scrolled .dropdown-content a:hover {
+    color: var(--header-text);
+}
+
+/*-------*/
+.header-actions .login-btn.dropbtn {
+    background: #ffffff;
+    color: #1e293b;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+.header-actions .login-btn.dropbtn:hover {
+    background: #ffd93d;
+    color: #1e293b;
+    transform: translateY(-2px);
+}
+.header-actions .login-btn.dropbtn {
+    color: #000000; /* Чёрный для максимального контраста */
+}
+
+
+/* ================== АДАПТАЦИЯ ШАПКИ ================== */
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .site-title {
+        font-size: 22px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .lang-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .login-btn {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+    
+    /* ==== ИСПРАВЛЕНИЕ ДЛЯ МОБИЛЬНОЙ ШАПКИ ====
+      Прячем кнопки языка и входа/профиля из шапки.
+      Они остаются в мобильном меню, которое открывается по бургеру.
+    */
+    .header-actions .language-switcher,
+    .header-actions > a.login-btn,
+    .header-actions > .dropdown {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Правила для .header-content и .header-actions (flex-wrap) 
+      отсюда УДАЛЕНЫ, чтобы шапка не переносилась на две строки 
+    */
+    
+    .mobile-nav {
+        width: 200px;
+    }
+}

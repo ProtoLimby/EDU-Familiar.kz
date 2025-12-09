@@ -1,0 +1,226 @@
+/* auth-styles.css (ОЧИЩЕННЫЙ ОТ СТИЛЕЙ ШАПКИ) */
+:root {
+    --primary-color: #ff8c42;        /* мягкий оранжевый */
+    --secondary-color: #7b61ff;      /* фиолетово-синий */
+    --accent-color: #ffd93d;         /* акцентный жёлтый */
+    --text-color: #1e293b;
+    --bg-color: #f9fafc;
+    --card-bg: #ffffff;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Updated shadow to match styles.css */
+    --header-text: #ffffff;
+    --header-text-scrolled: #1f2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* === СТИЛИ ШАПКИ (строки 28-210) УДАЛЕНЫ === */
+/* Они теперь находятся в CSS/header.css */
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 100px auto 60px;
+    padding: 40px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.register-btn,
+.login-btn-form {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.register-btn:hover,
+.login-btn-form:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+footer {
+    width: 100%;
+    max-width: 1400px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 60px 40px 30px;
+    text-align: center;
+    border-radius: 16px;
+    margin: 60px auto 0;
+    box-shadow: var(--shadow);
+}
+
+.footer-content {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    margin-top: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 12px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    /* Стили .desktop-nav, .burger-menu, .site-title, .header-actions, .lang-btn, .login-btn УДАЛЕНЫ */
+
+    .container {
+        padding: 20px;
+        margin: 80px auto 40px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        margin: 10px auto;
+    }
+
+    .footer-section {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Стили .header-content, .header-actions, .mobile-nav УДАЛЕНЫ */
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+/* Стили .language-switcher, .lang-select, .dropdown и т.д. УДАЛЕНЫ */
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
