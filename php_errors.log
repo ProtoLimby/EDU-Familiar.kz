@@ -1,0 +1,132 @@
+[23-Oct-2025 15:55:16 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=8
+[23-Oct-2025 15:55:16 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 15:55:32 Etc/GMT-5] update_name.php: user_id=2, new_username=234242, new_full_name=2342342, new_class=10
+[23-Oct-2025 15:55:32 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=2
+[23-Oct-2025 15:56:55 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=8
+[23-Oct-2025 15:56:55 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:01:07 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=6
+[23-Oct-2025 16:01:07 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:01:17 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=6
+[23-Oct-2025 16:01:17 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:04:03 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=6
+[23-Oct-2025 16:04:03 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:06:56 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=6
+[23-Oct-2025 16:06:56 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:09:49 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=7
+[23-Oct-2025 16:09:49 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:10:06 Etc/GMT-5] update_avatar.php: Загрузка файла Logomin.png, user_id=1
+[23-Oct-2025 16:10:06 Etc/GMT-5] update_avatar.php: Удалён старый аватар: avatar_1.jpg
+[23-Oct-2025 16:10:06 Etc/GMT-5] update_avatar.php: Аватар успешно обновлён: avatar_1.png
+[23-Oct-2025 16:10:56 Etc/GMT-5] update_avatar.php: Загрузка файла ChatGPT Image 6 окт. 2025 г., 04_55_46.png, user_id=2
+[23-Oct-2025 16:10:56 Etc/GMT-5] update_avatar.php: Удалён старый аватар: avatar_2.png
+[23-Oct-2025 16:10:56 Etc/GMT-5] update_avatar.php: Аватар успешно обновлён: avatar_2.png
+[23-Oct-2025 16:11:10 Etc/GMT-5] update_name.php: user_id=1, new_username=Test3, new_full_name=Цыганенко В.А., new_class=7
+[23-Oct-2025 16:11:10 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:11:28 Etc/GMT-5] update_name.php: user_id=1, new_username=Test5, new_full_name=Цыганенко В.И, new_class=7
+[23-Oct-2025 16:11:28 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:11:34 Etc/GMT-5] update_name.php: user_id=1, new_username=Test5, new_full_name=Цыганенко В.И, new_class=7
+[23-Oct-2025 16:11:34 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:11:51 Etc/GMT-5] update_name.php: user_id=2, new_username=234242, new_full_name=2342342, new_class=10
+[23-Oct-2025 16:11:51 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=2
+[23-Oct-2025 16:12:30 Etc/GMT-5] update_name.php: user_id=2, new_username=543, new_full_name=123, new_class=10
+[23-Oct-2025 16:12:30 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=2
+[23-Oct-2025 16:13:30 Etc/GMT-5] update_name.php: user_id=2, new_username=5436, new_full_name=1231, new_class=10
+[23-Oct-2025 16:13:30 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=2
+[23-Oct-2025 16:13:37 Etc/GMT-5] update_name.php: user_id=2, new_username=5436, new_full_name=1231, new_class=10
+[23-Oct-2025 16:13:37 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=2
+[23-Oct-2025 16:14:17 Etc/GMT-5] update_name.php: user_id=1, new_username=Test2, new_full_name=Цыганенко В.И, new_class=7
+[23-Oct-2025 16:14:17 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:14:32 Etc/GMT-5] update_name.php: user_id=1, new_username=Test4, new_full_name=Цыганенко В.И, new_class=
+[23-Oct-2025 16:14:32 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:15:27 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:15:27 Etc/GMT-5] update_name.php: user_id=1, new_username=Test4, new_full_name=Цыганенко В.И, new_class=
+[23-Oct-2025 16:15:27 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:15:31 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:15:31 Etc/GMT-5] update_name.php: user_id=1, new_username=Test4, new_full_name=Цыганенко В.И, new_class=
+[23-Oct-2025 16:15:31 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:15:39 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:15:39 Etc/GMT-5] update_name.php: user_id=1, new_username=Test4, new_full_name=Цыганенко В.И, new_class=10
+[23-Oct-2025 16:15:39 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:15:43 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:15:44 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=10
+[23-Oct-2025 16:15:44 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:16:21 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:16:21 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=5
+[23-Oct-2025 16:16:21 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:16:52 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:16:52 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=5
+[23-Oct-2025 16:16:52 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:17:34 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:17:34 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=
+[23-Oct-2025 16:17:34 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[23-Oct-2025 16:17:41 Etc/GMT-5] update_avatar.php: Загрузка файла inm4.png, user_id=1
+[23-Oct-2025 16:17:41 Etc/GMT-5] update_avatar.php: Удалён старый аватар: avatar_1.jpg
+[23-Oct-2025 16:17:41 Etc/GMT-5] update_avatar.php: Аватар успешно обновлён: avatar_1.png
+[23-Oct-2025 16:20:04 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:20:04 Etc/GMT-5] update_name.php: user_id=2, new_username=5436, new_full_name=1231, new_class=6
+[23-Oct-2025 16:20:04 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=2
+[23-Oct-2025 16:20:15 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 16:20:15 Etc/GMT-5] update_name.php: user_id=2, new_username=543675, new_full_name=1231, new_class=6
+[23-Oct-2025 16:20:15 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=2
+[23-Oct-2025 21:53:25 Etc/GMT-5] update_name.php: Script started
+[23-Oct-2025 21:53:25 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=9
+[23-Oct-2025 21:53:25 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[25-Oct-2025 03:25:00 Etc/GMT-5] update_name.php: Script started
+[25-Oct-2025 03:25:00 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=8
+[25-Oct-2025 03:25:00 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[28-Oct-2025 00:10:49 Etc/GMT-5] update_name.php: Script started
+[28-Oct-2025 00:10:49 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=9
+[28-Oct-2025 00:10:49 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[28-Oct-2025 00:17:24 Etc/GMT-5] update_name.php: Script started
+[28-Oct-2025 00:17:24 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=9
+[28-Oct-2025 00:17:24 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[28-Oct-2025 00:17:30 Etc/GMT-5] update_avatar.php: Script started
+[28-Oct-2025 00:17:30 Etc/GMT-5] update_avatar.php: Загрузка файла inm2.png, user_id=1
+[28-Oct-2025 00:17:30 Etc/GMT-5] update_avatar.php: Удалён старый аватар: avatar_1.png
+[28-Oct-2025 00:17:30 Etc/GMT-5] update_avatar.php: Аватар успешно обновлён: avatar_1.png
+[28-Oct-2025 00:17:47 Etc/GMT-5] update_avatar.php: Script started
+[28-Oct-2025 00:17:47 Etc/GMT-5] update_avatar.php: Загрузка файла inm3.png, user_id=1
+[28-Oct-2025 00:17:47 Etc/GMT-5] update_avatar.php: Удалён старый аватар: avatar_1.png
+[28-Oct-2025 00:17:47 Etc/GMT-5] update_avatar.php: Аватар успешно обновлён: avatar_1.png
+[28-Oct-2025 00:17:52 Etc/GMT-5] update_name.php: Script started
+[28-Oct-2025 00:17:52 Etc/GMT-5] update_name.php: user_id=1, new_username=Test8, new_full_name=Цыганенко В.И, new_class=9
+[28-Oct-2025 00:17:52 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[28-Oct-2025 00:26:30 Etc/GMT-5] update_name.php: Script started
+[28-Oct-2025 00:26:30 Etc/GMT-5] update_name.php: user_id=1, new_username=Test9, new_full_name=Цыганенко В.И, new_class=9
+[28-Oct-2025 00:26:30 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[28-Oct-2025 00:26:33 Etc/GMT-5] update_name.php: Script started
+[28-Oct-2025 00:26:33 Etc/GMT-5] update_name.php: user_id=1, new_username=Test9, new_full_name=Цыганенко В.И, new_class=9
+[28-Oct-2025 00:26:33 Etc/GMT-5] update_name.php: Данные успешно обновлены для user_id=1
+[28-Oct-2025 11:14:35 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:37 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:39 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:40 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:42 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:45 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:48 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:53 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:14:58 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:15:03 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1
+[28-Oct-2025 11:15:08 Etc/GMT-5] Leaderboard error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank 
+        FROM users 
+        WHERE points > (SELECT points FROM users WHE' at line 1

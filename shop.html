@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="catalog_title">Каталог - EDU-Familiar.kz</title>
+    <link rel="stylesheet" href="catalog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="site-title">EDU-Familiar.kz</div>
+            <nav class="desktop-nav">
+                <div class="dropdown">
+                    <a href="index.html#home" class="dropbtn" data-i18n="home">Главная</a> 
+                    <div class="dropdown-content">
+                        <a href="index.html#about" data-i18n="about">О нас</a>
+                        <a href="index.html#programs" data-i18n="programs">Программы</a>
+                        <a href="index.html#reviews" data-i18n="reviews">Отзывы</a>
+                        <a href="index.html#team" data-i18n="team">Команда</a>
+                        <a href="index.html#partners" data-i18n="partners">Партнеры</a>
+                    </div>
+                </div>
+                <a href="training.html" data-i18n="training">Обучение</a> 
+                <a href="best-students.html" data-i18n="best_students">Лучшие студенты</a> 
+                <a href="online-book.html" data-i18n="online_book">Онлайн книга</a>
+                <a href="shop.html" data-i18n="catalog">Каталог</a>
+            </nav>
+            <div class="header-actions">
+                <div class="language-switcher">
+                    <select id="language-select-header" class="lang-select">
+                        <option value="en">EN</option>
+                        <option value="kz">KZ</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <a href="login.html" class="login-btn" data-i18n="login">Войти</a>
+                <button class="burger-menu" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html#home" data-i18n="home">Главная</a>
+            <a href="index.html#about" data-i18n="about">О нас</a>
+            <a href="index.html#programs" data-i18n="programs">Программы</a>
+            <a href="index.html#reviews" data-i18n="reviews">Отзывы</a>
+            <a href="index.html#team" data-i18n="team">Команда</a>
+            <a href="index.html#partners" data-i18n="partners">Партнеры</a>
+            <a href="training.html" data-i18n="training">Обучение</a> 
+            <a href="best-students.html" data-i18n="best_students">Лучшие студенты</a> 
+            <a href="online-book.html" data-i18n="online_book">Онлайн книга</a>
+            <a href="shop.html" data-i18n="catalog">Каталог</a>
+            <div class="mobile-actions">
+                <div class="language-switcher">
+                    <select id="language-select-mobile" class="lang-select">
+                        <option value="en">EN</option>
+                        <option value="kz">KZ</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <a href="login.html" class="login-btn" data-i18n="login">Войти</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="catalog" class="container section-hidden">
+        <div class="banner">
+            <img src="img/1920x600.jpg" alt="Catalog Banner">
+        </div>
+        <h2 data-i18n="catalog_title">Каталог товаров</h2>
+
+        <!-- Кружки -->
+        <div class="category card">
+            <h3 class="category-title" data-i18n="mugs">Кружки</h3>
+            <div class="products-grid" id="mugs-grid">
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кружка 1">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="mug1_name">Кружка "Котик"</h4>
+                        <div class="product-price">4000 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кружка 2">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="mug2_name">Кружка "Мотивация"</h4>
+                        <div class="product-price">4000 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кружка 3">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="mug3_name">Кружка "Любовь"</h4>
+                        <div class="product-price">4000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кружка 4">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="mug4_name">Кружка "Природа"</h4>
+                        <div class="product-price">4000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кружка 5">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="mug5_name">Кружка "Космос"</h4>
+                        <div class="product-price">4000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кружка 6">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="mug6_name">Кружка "Минимализм"</h4>
+                        <div class="product-price">4000 EF</div>
+                    </div>
+                </div>
+            </div>
+            <button class="info-btn" onclick="toggleProducts('mugs-grid')" data-i18n="show_more">Показать еще</button>
+        </div>
+
+        <!-- Рюкзаки -->
+        <div class="category card">
+            <h3 class="category-title" data-i18n="backpacks">Рюкзаки</h3>
+            <div class="products-grid" id="backpacks-grid">
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Рюкзак 1">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="backpack1_name">Рюкзак "Городской"</h4>
+                        <div class="product-price">11700 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Рюкзак 2">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="backpack2_name">Рюкзак "Спорт"</h4>
+                        <div class="product-price">11700 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Рюкзак 3">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="backpack3_name">Рюкзак "Классика"</h4>
+                        <div class="product-price">11700 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Рюкзак 4">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="backpack4_name">Рюкзак "Путешествие"</h4>
+                        <div class="product-price">11700 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Рюкзак 5">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="backpack5_name">Рюкзак "Минимал"</h4>
+                        <div class="product-price">11700 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Рюкзак 6">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="backpack6_name">Рюкзак "Эко"</h4>
+                        <div class="product-price">11700 EF</div>
+                    </div>
+                </div>
+            </div>
+            <button class="info-btn" onclick="toggleProducts('backpacks-grid')" data-i18n="show_more">Показать еще</button>
+        </div>
+
+        <!-- Футболки/Толстовки -->
+        <div class="category card">
+            <h3 class="category-title" data-i18n="tshirts">Футболки/Толстовки</h3>
+            <div class="products-grid" id="tshirts-grid">
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Футболка 1">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="tshirt1_name">Футболка "Принт"</h4>
+                        <div class="product-price">20000 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Футболка 2">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="tshirt2_name">Футболка "Классика"</h4>
+                        <div class="product-price">20000 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Футболка 3">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="tshirt3_name">Футболка "Спорт"</h4>
+                        <div class="product-price">20000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Футболка 4">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="tshirt4_name">Футболка "Винтаж"</h4>
+                        <div class="product-price">20000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Футболка 5">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="tshirt5_name">Футболка "Минимализм"</h4>
+                        <div class="product-price">20000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Футболка 6">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="tshirt6_name">Футболка "Эко"</h4>
+                        <div class="product-price">20000 EF</div>
+                    </div>
+                </div>
+            </div>
+            <button class="info-btn" onclick="toggleProducts('tshirts-grid')" data-i18n="show_more">Показать еще</button>
+        </div>
+
+        <!-- Кепки -->
+        <div class="category card">
+            <h3 class="category-title" data-i18n="caps">Кепки</h3>
+            <div class="products-grid" id="caps-grid">
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кепка 1">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="cap1_name">Кепка "Классика"</h4>
+                        <div class="product-price">8900 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кепка 2">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="cap2_name">Кепка "Snapback"</h4>
+                        <div class="product-price">8900 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кепка 3">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="cap3_name">Кепка "Бейсболка"</h4>
+                        <div class="product-price">8900 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кепка 4">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="cap4_name">Кепка "Траки"</h4>
+                        <div class="product-price">8900 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кепка 5">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="cap5_name">Кепка "Винтаж"</h4>
+                        <div class="product-price">8900 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Кепка 6">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="cap6_name">Кепка "Эко"</h4>
+                        <div class="product-price">8900 EF</div>
+                    </div>
+                </div>
+            </div>
+            <button class="info-btn" onclick="toggleProducts('caps-grid')" data-i18n="show_more">Показать еще</button>
+        </div>
+
+        <!-- Тетради -->
+        <div class="category card">
+            <h3 class="category-title" data-i18n="notebooks">Тетради</h3>
+            <div class="products-grid" id="notebooks-grid">
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Тетрадь 1">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="notebook1_name">Тетрадь А5 "Минимал"</h4>
+                        <div class="product-price">6000 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Тетрадь 2">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="notebook2_name">Тетрадь А5 "Принт"</h4>
+                        <div class="product-price">6000 EF</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Тетрадь 3">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="notebook3_name">Тетрадь А6 "Путешествие"</h4>
+                        <div class="product-price">6000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Тетрадь 4">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="notebook4_name">Тетрадь А5 "Космос"</h4>
+                        <div class="product-price">6000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Тетрадь 5">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="notebook5_name">Тетрадь А5 "Флора"</h4>
+                        <div class="product-price">6000 EF</div>
+                    </div>
+                </div>
+                <div class="card hidden">
+                    <div class="product-image">
+                        <img src="img/300x200.jpg" alt="Тетрадь 6">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-name" data-i18n="notebook6_name">Тетрадь А6 "Минимализм"</h4>
+                        <div class="product-price">6000 EF</div>
+                    </div>
+                </div>
+            </div>
+            <button class="info-btn" onclick="toggleProducts('notebooks-grid')" data-i18n="show_more">Показать еще</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="about_edu">О EDU-Familiar.kz</h3>
+                <p data-i18n="footer_about_desc">Мы ведущая образовательная платформа в Казахстане, предлагающая передовые курсы для подготовки студентов к будущему.</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="quick_links">Быстрые ссылки</h3>
+                <a href="index.html#programs" data-i18n="our_programs">Наши программы</a>
+                <a href="index.html#reviews" data-i18n="student_reviews">Отзывы студентов</a>
+                <a href="index.html#team" data-i18n="meet_the_team">Познакомьтесь с командой</a>
+                <a href="index.html#partners" data-i18n="our_partners">Наши партнеры</a>
+                <a href="index.html#faq" data-i18n="faq">Часто задаваемые вопросы</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="contact_us">Свяжитесь с нами</h3>
+                <p><span data-i18n="email_label">Email:</span> info@edu-familiar.kz</p>
+                <p><span data-i18n="phone_label">Телефон:</span> +7 (776) 348-4803</p>
+                <p><span data-i18n="address_label">Адрес:</span> Толстой көшесі, 99, 1-қабат Павлодар, Қазақстан</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="follow_us">Следите за нами</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+                <h3 data-i18n="language">Язык</h3>
+                <div class="language-switcher">
+                    <select id="language-select-footer" class="lang-select">
+                        <option value="en">EN</option>
+                        <option value="kz">KZ</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">2025 EDU-Familiar.kz. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div class="scroll-to-top" onclick="scrollToTop()">↑</div>
+
+    <script src="script.js"></script>
+    <script src="language.js"></script>
+    <script>
+        function toggleProducts(gridId) {
+            const grid = document.getElementById(gridId);
+            const hiddenCards = grid.querySelectorAll('.hidden');
+            hiddenCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.remove('hidden');
+                    card.classList.add('visible');
+                }, index * 150);
+            });
+            const button = event.target;
+            const lang = localStorage.getItem('language') || 'ru';
+            button.textContent = translations[lang].all_shown || 'Все товары показаны';
+            button.style.background = '#2ecc71';
+            button.disabled = true;
+        }
+    </script>
+</body>
+</html>
